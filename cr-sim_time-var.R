@@ -11,10 +11,9 @@
 ##################################################################################################
 
 # Read in packages
-lib <- "~/R/x86_64-pc-linux-gnu-library/4.0"
 packages <- c("survival", "nnet", "cmprsk", "tidyverse", "data.table", "parallel")
 for (package in packages) {
-  library(package, character.only=T, lib.loc=lib)
+  library(package, character.only=T)
 }
 
 # Define parameters and functions
@@ -22,7 +21,7 @@ n <- 1000           # Number of subjects
 N <- 6              # Number of time points per subject
 K <- 2              # Number of causes of death
 montecarlo <- 10000 # Size of Monte Carlo resample
-nsim <- 1000        # Number of simulations
+nsim <- 1           # Number of simulations
 nboot <- 200        # Number of bootstrap resamples
 lambda <- 0.1       # Baseline rate of the outcome
 
