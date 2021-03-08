@@ -11,10 +11,9 @@
 ##################################################################################################
 
 # Read in packages
-lib <- "~/R/x86_64-pc-linux-gnu-library/4.0"
 packages <- c("survival", "nnet", "cmprsk", "tidyverse", "data.table", "parallel")
 for (package in packages) {
-  library(package, character.only=T, lib.loc=lib)
+  library(package, character.only=T)
 }
 
 # Define parameters and functions
